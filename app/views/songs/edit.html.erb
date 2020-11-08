@@ -1,2 +1,23 @@
-<h1>Songs#edit</h1>
-<p>Find me in app/views/songs/edit.html.erb</p>
+<h1>Edit Song Form</h1>
+<%=form_for(@song) do |t|%>
+
+<%=t.label 'Title: '%>
+<%=t.text_field :title, @song.title%><br>
+
+<%=t.label 'Released'%>
+<%=t.check_box :released, @song.released%><br>
+
+<%=t.label 'Release Year'%>
+<%=t.number_field :release_year, @song.release_year%><br>
+
+<%=t.label 'Artist Name: '%>
+<%=t.text_field :artist_name, @song.artist_name%><br>
+
+<%=t.label 'Genre; '%>
+<%=t.text_field :genre, @song.genre%><br>
+
+<%=t.submit%>
+
+<%end%>
+
+
